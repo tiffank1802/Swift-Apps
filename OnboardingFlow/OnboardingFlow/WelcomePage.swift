@@ -11,17 +11,31 @@ struct WelcomePage: View {
     var body: some View {
         
         VStack {
-            RoundedRectangle(cornerRadius: 30)
+            
+            ZStack {
+                RoundedRectangle(cornerRadius: 30)
+                    .frame(width: 300, height: 150)
+                    .foregroundStyle(.tint)
+                
+                    .padding()
+                Image(systemName: "figure.2.and.child.holdinghands")
+                    .font(.system(size: 100, weight: .light))
+                    .foregroundStyle(.white)
+                   
+                    
+            }
             Text("Welcome to my App!")
                 .font(.title)
                 .fontWeight(.semibold)
                 .fontWidth(.condensed)
                 .fontDesign(.some(.monospaced))
-                .border(.black,width: 1.5)
+            
+                
+                .padding()
             Text("This is my first app for onbaording which aims to help you to understand how to use SwiftUI.")
                 .multilineTextAlignment(.center)
                 .font(.title2)
-                .border(.black,width: 1.5)
+                
             
         }
         .padding()
